@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using designPatterns.Creational;
+using designPatterns.Structural;
 
 namespace designPatterns
 {
@@ -28,13 +29,23 @@ namespace designPatterns
             //## Builder DP
             //CreationDP.BuilderDP();
 
-            #endregion  
+            #endregion
+
+
+            #region Structural
+
+            //## Adapter DP
+            StructureDP.AdapterDP();
+
+            #endregion
 
             Console.ReadLine();
         }
     }
 
-
+    /// <summary>
+    /// Creation Design Patterns
+    /// </summary>
     public static class CreationDP
     {
 
@@ -69,6 +80,19 @@ namespace designPatterns
         {
             var BDP = new Builder();
             BDP.Demonstrate();
+        }
+    }
+
+
+
+    public static class StructureDP
+    {
+
+        public static void AdapterDP()
+        {
+            var adap = new Adapter();
+
+            Console.WriteLine($"the new Adapter value is {adap.GetNewMEthod()}");
         }
     }
 }
