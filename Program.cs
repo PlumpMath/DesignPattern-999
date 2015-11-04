@@ -35,7 +35,11 @@ namespace designPatterns
             #region Structural
 
             //## Adapter DP
-            StructureDP.AdapterDP();
+            //StructureDP.AdapterDP();
+
+            //## Bridge DP
+            //StructureDP.BridgeDP();
+
 
             #endregion
 
@@ -93,6 +97,12 @@ namespace designPatterns
             var adap = new Adapter();
 
             Console.WriteLine($"the new Adapter value is {adap.GetNewMEthod()}");
+        }
+
+        public static void BridgeDP()
+        {
+            var bridge = new Bridge();
+            bridge.Demonstrate();
         }
     }
 }
