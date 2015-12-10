@@ -35,10 +35,10 @@ namespace designPatterns.Structural
     }
 
 
-    public abstract class Decorator : BakeryComponent
-    {
+    //public abstract class Decorator : BakeryComponent
+    //{
 
 
         
-    }
+    //}
 }
