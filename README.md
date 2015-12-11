@@ -1,6 +1,6 @@
 # DesignPattern
-Design Patterns Created  over Console as classical as can be
-t
+Desighn patterns based over http://www.dofactory.com/net/design-patterns
+
 
 #Structural Desighn PAttern
 
