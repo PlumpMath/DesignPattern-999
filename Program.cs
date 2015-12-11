@@ -104,5 +104,11 @@ namespace designPatterns
             var bridge = new Bridge();
             bridge.Demonstrate();
         }
+
+        public static void Facade()
+        {
+            var fas = new Facade();
+            fas.StartJogging();
+        }
     }
 }
