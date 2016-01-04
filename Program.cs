@@ -40,6 +40,8 @@ namespace designPatterns
             //## Bridge DP
             //StructureDP.BridgeDP();
 
+            //## Flyweight DP
+            Flyweight.Test();
 
             #endregion
 
