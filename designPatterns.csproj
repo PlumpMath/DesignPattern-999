@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="behaviour\ChainOFResponsabillity.cs" />
     <Compile Include="Creational\Builder.cs" />
     <Compile Include="Creational\Factory.cs" />
     <Compile Include="Creational\Prototype.cs" />

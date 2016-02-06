@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using designPatterns.behaviour;
 using designPatterns.Creational;
 using designPatterns.Structural;
 
@@ -41,7 +42,13 @@ namespace designPatterns
             //StructureDP.BridgeDP();
 
             //## Flyweight DP
-            Flyweight.Test();
+            //Flyweight.Test();
+
+            #endregion
+
+            #region Behaviour
+
+            BehavioursDP.ChainOfResp();
 
             #endregion
 
@@ -108,9 +115,19 @@ namespace designPatterns
         }
 
         public static void Facade()
-        {
+        {   
             var fas = new Facade();
             fas.StartJogging();
+        }
+    }
+
+
+    public static class BehavioursDP
+    {
+        public static void ChainOfResp()
+        {
+            var cOr = new ChainOFResponsabillity();
+            cOr.Test();
         }
     }
 }
