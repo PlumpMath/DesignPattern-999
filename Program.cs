@@ -39,7 +39,7 @@ namespace designPatterns
             //StructureDP.AdapterDP();
 
             //## Bridge DP
-            //StructureDP.BridgeDP();
+            StructureDP.BridgeDP();
 
             //## Flyweight DP
             //Flyweight.Test();
@@ -48,7 +48,7 @@ namespace designPatterns
 
             #region Behaviour
 
-            BehavioursDP.ChainOfResp();
+            //BehavioursDP.ChainOfResp();
 
             #endregion
 
