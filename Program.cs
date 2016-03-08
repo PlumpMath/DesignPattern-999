@@ -39,10 +39,13 @@ namespace designPatterns
             //StructureDP.AdapterDP();
 
             //## Bridge DP
-            StructureDP.BridgeDP();
+            //StructureDP.BridgeDP();
 
             //## Flyweight DP
             //Flyweight.Test();
+
+            //##Composite DP
+            StructureDP.CompositeDP();
 
             #endregion
 
@@ -112,6 +115,14 @@ namespace designPatterns
         {
             var bridge = new Bridge();
             bridge.Demonstrate();
+        }
+
+        public static void CompositeDP()
+        {
+            var compositeDP = new Composite();
+
+            compositeDP.Demonstrate();
+
         }
 
         public static void Facade()
