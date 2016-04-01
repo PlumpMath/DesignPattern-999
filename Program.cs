@@ -45,7 +45,10 @@ namespace designPatterns
             //Flyweight.Test();
 
             //##Composite DP
-            StructureDP.CompositeDP();
+            //StructureDP.CompositeDP();
+
+            //##Decorator DP
+            StructureDP.Decorator();
 
             #endregion
 
@@ -129,6 +132,12 @@ namespace designPatterns
         {   
             var fas = new Facade();
             fas.StartJogging();
+        }
+
+        public static void Decorator()
+        {
+            var decor = new DecoratorDP();
+            decor.Demonstrate();
         }
     }
 
