@@ -48,7 +48,10 @@ namespace designPatterns
             //StructureDP.CompositeDP();
 
             //##Decorator DP
-            StructureDP.Decorator();
+            //StructureDP.Decorator();
+
+            //##Proxy DP
+            //StructureDP.Proxy();
 
             #endregion
 
@@ -131,7 +134,13 @@ namespace designPatterns
         public static void Facade()
         {   
             var fas = new Facade();
-            fas.StartJogging();
+            fas.GetTempretureInformation("1000");
+        }
+
+        public static void Proxy()
+        {
+            var prox = new Proxy();
+            prox.demonstrate();
         }
 
         public static void Decorator()

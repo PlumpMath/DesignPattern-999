@@ -6,14 +6,26 @@ using System.Threading.Tasks;
 
 namespace designPatterns.Structural
 {
-    class Proxy
+   public class Proxy
     {
+
+        public void demonstrate()
+        {
+            var prox = new proxyDp("aa","bbb");
+
+
+            Console.WriteLine(prox.BuyClothes("1"));
+            Console.WriteLine(prox.BuyClothes("1"));
+        }
+
     }
 
 
 
 
-
+    /// <summary>
+    /// this is proxy design pattern which is checking does the service have connection and if it hasent it's returning default object till the service is loaded
+    /// </summary>
     public class proxyDp : IBuyService
     {
         private IBuyService service;
@@ -24,22 +36,41 @@ namespace designPatterns.Structural
 
         }
 
+        public bool isloaded
+        { get; set;       
+        }
 
         public string BuyClothes(string id)
         {
-        
+            string result = "not loaded this is default value";
 
-            return service.BuyClothes(id);
+
+            if(service.isloaded)
+            {
+                return service.BuyClothes(id);
+            }
+
+            service.ReloadData();
+            return result;
         }
 
         public string GetPrices()
         {
-            return service.GetPrices();
+            string result = "not loaded this is default value";
+
+            if (service.isloaded)
+            {
+                return service.GetPrices(); ;
+            }
+
+            service.ReloadData();
+            return result;
         }
 
- 
-   
-  
+        public void ReloadData()
+        {
+            isloaded = true;
+        }
     }
 
     
@@ -49,7 +80,9 @@ namespace designPatterns.Structural
     /// </summary>
     public class BuyService : IBuyService
     {
-        public bool isLoaded { get; protected set; } = false;
+        public bool isloaded { get; set; } = false;
+
+       
 
         public string GetPrices()
         {
@@ -63,7 +96,7 @@ namespace designPatterns.Structural
 
         public void ReloadData()
         {
-            isLoaded = true;
+            isloaded = true;
         }
     }
 
