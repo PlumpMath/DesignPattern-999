@@ -59,6 +59,9 @@ namespace designPatterns
 
             //BehavioursDP.ChainOfResp();
 
+            //Command Design Pattern
+            //BehavioursDP.CommandDP();
+
             #endregion
 
             Console.ReadLine();
@@ -158,5 +161,12 @@ namespace designPatterns
             var cOr = new ChainOFResponsabillity();
             cOr.Test();
         }
+
+        public static void CommandDP()
+        {
+            var cmd =new Command();
+            cmd.Demonstrate();
+        }
+
     }
 }
